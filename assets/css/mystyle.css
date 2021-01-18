@@ -1,9 +1,100 @@
-
 /* Style the background */
-#background {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+
+body {
+	background: url(../img/bg.png);
+	background-size: cover;
+	overflow: auto;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
 }
+
+/* Style the room objects */
+
+.room {
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	background-clip: content-box;
+}
+
+/* WOOD TABLE */
+
+.table {
+	position: absolute;
+	top: 100%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 100%;
+}
+
+.table img{
+	width: 150%;
+}
+
+/* LAPTOP */
+
+.laptop {
+	position: absolute;
+	top: 22%;
+	left: 13%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	display: flex;
+	min-width: 100%;
+}
+
+.laptop img {
+	width: 50%;
+}
+
+/* CUP OF COFFEE */
+
+.coffee {
+	position: absolute;
+	top: 34%;
+	left: 74%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	display: flex;
+	min-width: 100%;
+}
+
+.coffee img {
+	width: 9%;
+}
+
+/* PICTURE FRAME */
+
+.frame {
+	position: absolute;
+	top: 36%;
+	left: 63%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	display: flex;
+	min-width: 100%;
+}
+
+.frame svg{
+	width: 25%;
+}
+
+/* TERMINAL */
+
+.terminal {
+	position: absolute;
+	top: 11%;
+	right: 12%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 100vw;
+	max-height: 25vh;
+}
+
