@@ -42,7 +42,7 @@ var prompt = {
       prompt.focus();
     },
     clear: function(){
-        prompt.commands.push(e.target.value);
+        prompt.commands.push("clear");
         prompt.body.html("");
         k = `<div class="terminal__text">Type 'help' for a list of commands.</div>
             <div class="terminal_main">
