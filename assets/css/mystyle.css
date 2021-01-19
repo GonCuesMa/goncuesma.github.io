@@ -8,6 +8,18 @@
     font-style: normal;
 }
 
+/* Smartphone Portrait and Landscape */
+
+@media only screen and (min-device-width : 320px)
+	and (max-device-width : 480px) {
+ 	.room { 
+		display: none;
+	 }
+	 .mobile-room {
+		display: block;
+	 }
+}
+
 /* Style the background */
 
 body {
@@ -26,6 +38,12 @@ body {
 	display: flex;
 	flex-direction: row;
 	background-clip: content-box;
+}
+
+.mobile-room {
+	display: none;
+	color: #FFF;
+	text-align: center;
 }
 
 /* WOOD TABLE */
@@ -263,30 +281,4 @@ body {
 	width: 0;
 	height: 0;
 	opacity: 0;
-}
-
-/* STICKY NOTE */
-
-.note {
-	position: absolute;
-	top: 17%;
-	left: 2%;
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-	display: flex;
-	width: 17vw;
-}
-
-.note__content {
-	width: 11vw;
-	height: 3vh;
-	position: absolute;
-	font-family: 'ppetrial-normal';
-	font-size: 15px;
-	top: 3vh;
-	left: 2vw;
-}
-
-.note__content h1 {
-	font-size: 22px;
 }
