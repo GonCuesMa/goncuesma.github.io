@@ -18,47 +18,36 @@
 <body>
 
 <div class="main">
-	<div class="room">
-		<div class="table">
-			<img src="assets/img/table.svg" />
-			<div class="laptop">
-				<img src="assets/img/laptop.svg" />
-			</div>
-			<div class="terminal">
-				<section id="terminal">
-					<nav class="terminal_nav">
-						<div class="terminal_nav__btns">
-							<button class="terminal_nav__btn t-exit js-close">&#10005;</button>
-							<button class="terminal_nav__btn js-maximize">&#9723;</button>
-							<button class="terminal_nav__btn js-minimize">&#9472;</button>
+	<div class="room mobile-hide">
+		<div class="terminal">
+			<section id="terminal">
+				<nav class="terminal_nav">
+					<div class="terminal_nav__btns">
+						<button class="terminal_nav__btn t-exit js-close">&#10005;</button>
+						<button class="terminal_nav__btn js-maximize">&#9723;</button>
+						<button class="terminal_nav__btn js-minimize">&#9472;</button>
+					</div>
+					<p class="terminal_nav__title">gcm@root: ~</p>
+				</nav>
+				<section id="terminal_body">
+					<div class="terminal__text"></div>
+					<div class="terminal_main">
+						<div class="terminal_input_left">
+							<span class="user_msg">you@gcm:</span><span class="user_loc">~</span><span class="user_doll">$</span>
 						</div>
-						<p class="terminal_nav__title">gcm@root: ~</p>
-					</nav>
-					<section id="terminal_body">
-						<div class="terminal__text">Type 'help' for a list of commands.</div>
-						<div class="terminal_main">
-							<div class="terminal_input_left">
-								<span class="user_msg">you@gcm:</span><span class="user_loc">~</span><span class="user_doll">$</span>
-							</div>
-							<input class="terminal_input js-prompt-input" type="text">
-						</div>
-					</section>
+						<input class="terminal_input js-prompt-input" type="text">
+					</div>
 				</section>
-				<div class="prompt-shortcut i-prompt hidden js-open"></div>
-			</div>
-			<script src="assets/js/javascript.js"></script> 
-			<div class="coffee"> 
-				<img src="assets/img/coffee.svg" />
-			</div>
+			</section>
+			<div class="prompt-shortcut i-prompt hidden js-open"></div>
 		</div>
-		<div class="frame">
-			<!-- TODO: Add image-->
-			<img src="assets/img/frame.svg" />
+		<script src="assets/js/javascript.js"></script> 
+		<div class="smoke">
+			<img src="assets/img/smoke.gif" />
 		</div>
 	</div>
-	<div class="mobile-room">
-		<!-- TODO: MOBILE VERSION-->
-		Mobile devices are not supported.
+	<div class="warn">
+		<img src="assets/img/rotate.gif" />
 	</div>
 </div>
 
