@@ -1,24 +1,74 @@
 /* FONTS */
 
+@font-face {
+    font-family: 'ubuntu mono';
+    src: url('../fonts/ubuntumono-regular.woff2') format('woff2'),
+         url('../fonts/ubuntumono-regular.woff') format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'ubuntu mono';
+    src: url('../fonts/ubuntumono-bold.woff2') format('woff2'),
+         url('../fonts/ubuntumono-bold.woff') format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+	font-family: 'ubuntu mono';
+	font-style: italic;
+	font-weight: normal;
+	src: url('../fonts/ubuntumono-italic.woff2') format('woff2'),
+		 url('../fonts/ubuntumono-italic.woff') format('woff'); 
+}
+
+@font-face {
+	font-family: 'ubuntu mono';
+	font-style: italic;
+	font-weight: bold;
+	src: url('../fonts/ubuntumono-bolditalic.woff2') format('woff2'),
+		 url('../fonts/ubuntumono-bolditalic.woff') format('woff'); 
+}
+
+/* Mobile Support */
+
 @media only screen and (max-width: 479px) {
 	.mobile-hide { 
 		display: none !important; 
 	}
 
 	.warn {
+	
 		display: block !important;
 	}
 }
 
 .warn {
 	position: absolute;
-	top: 20vh;
+	top: 18vh;
 	left: 9vw;
 	display: none;
 }
 
 .warn img{
 	width: 80vw;
+}
+
+/* Light */
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: rgba(0,0,0,.8);
+}
+
+.highlight {
+    z-index: 11;
 }
 
 /* Style the background */
@@ -77,10 +127,10 @@ body {
 .terminal {
 	position: absolute;
 	top: 35vh;
-	right: 32.7vw;
-	-ms-transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
+	right: 32.5vw;
+	-ms-transform: translateY(-50%) rotateX(-10deg);
+	-webkit-transform: translateY(-50%) rotateX(-10deg);
+	transform: translateY(-50%) rotateX(-10deg);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -95,6 +145,8 @@ body {
 	box-shadow: 2px 4px 10px rgba(0,0,0,.5);
 	position: absolute;
 	border-radius: 10px 10px 0px 0px;
+	font-family: 'ubuntu mono';
+	font-size: small;
 }
 
 .terminal_nav {
@@ -146,7 +198,6 @@ body {
 }
 
 .terminal_nav__title {
-	font-family: 'Ubuntu mono';
 	color: #D5D0Ce;
 	font-weight: bold;
 	display: block;
@@ -156,16 +207,14 @@ body {
 }
 
 #terminal_body {
-	background: rgba(56, 4, 40, .9);
+	background: rgba(56, 4, 40, .5);
 	height: calc(100% - 25px);
 	margin-top: -1px;
 	padding-top: 2px;
 	width: 100%;
-	font-family: 'Ubuntu mono';
 	overflow-y: auto;
 	overflow-x: hidden;
 	display: inline-block;
-	padding-bottom: 10px;
 }
 
 .terminal_input{
