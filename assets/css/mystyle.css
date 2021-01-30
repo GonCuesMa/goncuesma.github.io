@@ -30,7 +30,7 @@
 		 url('../fonts/ubuntumono-bolditalic.woff') format('woff'); 
 }
 
-/* Mobile Support */
+/* Mobile Devices */
 
 @media only screen and (max-width: 479px) {
 	.mobile-hide { 
@@ -38,8 +38,16 @@
 	}
 
 	.warn {
-	
 		display: block !important;
+	}
+
+	body {
+		background: -moz-linear-gradient(45deg, #57003f 0%,#f57453 100%) !important; /* FF 3.6+ */  
+		background: -ms-linear-gradient(45deg, #57003f 0%,#f57453 100%) !important; /* IE10 */  
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #57003f), color-stop(100%, #f57453)) !important; /* Safari 4+, Chrome 2+ */  
+		background: -webkit-linear-gradient(45deg, #57003f 0%,#f57453 100%) !important; /* Safari 5.1+, Chrome 10+ */  
+		background: -o-linear-gradient(45deg, #57003f 0%,#f57453 100%) !important; /* Opera 11.10 */  
+		background: linear-gradient(45deg, #57003f 0%,#f57453 100%) !important; /* the standard */  
 	}
 }
 
@@ -82,6 +90,10 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+}
+
+body.t__maximized {
+	background: linear-gradient(45deg, #57003f 0%,#f57453 100%);
 }
 
 /* Style the room objects */
@@ -266,7 +278,17 @@ body {
 }
 
 .terminal.t__maximized #terminal {
-	width: 35vw;
+	width: 100vw;
+	height: 100vh;
+}
+
+.terminal.t__maximized {
+	z-index: 12;
+	top : auto;
+	right: auto;
+	transform : none;
+	justify-content: unset;
+	align-items: unset;
 }
 
 .terminal.t__closed #terminal{
@@ -296,4 +318,59 @@ body {
 	width: 0;
 	height: 0;
 	opacity: 0;
+}
+
+/* SOCIAL BAR */
+
+.bar {
+    width: 4vw;
+    height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+    display: flex;
+	flex-direction: row;
+	background-color: rgba(51, 48, 50, 0.5);
+	z-index: 12;
+}
+
+.bar .bar__btns {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.bar__btns a {
+    width: 3vw;
+    height: 3vw;
+	display: block;
+	align-self: center;
+}
+
+.bar__btns > a:not(:last-child) {
+    margin-bottom: 1vh;
+}
+
+.bar__btns a:hover {
+    cursor: pointer;
+}
+
+.bar__btns a > img {
+    filter: grayscale(100%);
+}
+
+.bar__btns a:hover > img {
+    transition: 0.4s ease-out;
+    filter: grayscale(0%);
+}
+
+.bar__btns img {
+    transition: 0.6s ease-in;
+    width: 80%;
+    height: 80%;
 }

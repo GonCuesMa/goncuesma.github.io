@@ -27,16 +27,22 @@ var prompt = {
       prompt.input.focus();
     },
     minimize: function() {
+      $('body,html').removeClass("t__maximized");
+      $('.smoke, .bar').show();
       prompt.window.removeClass("t__maximized");
       prompt.window.toggleClass("t__minimized");
     },
     maximize: function() {
       prompt.window.removeClass("t__minimized");
       prompt.window.toggleClass("t__maximized");
+      $('body,html').toggleClass("t__maximized");
+      $('.smoke, .bar').toggle();
       prompt.focus();
     },
     close: function() {
       prompt.window.addClass("t__closed");
+      $('body,html').removeClass("t__maximized");
+      $('.smoke, .bar').show();
       prompt.window.removeClass("t__maximized t__minimized");
       prompt.shortcut.removeClass("hidden");
       prompt.input.val("");
@@ -76,7 +82,11 @@ var prompt = {
             } else if (e.keyCode == 38){
               i = ++i;
               prompt.rememo(i);
+            } else if (e.keyCode == 40){
+              i = --  i;
+              prompt.rememo(i);
             }
+
         });
     },
     light: function(e) {
@@ -98,7 +108,7 @@ var prompt = {
         prompt.commands.push(e.target.value);
         switch(e.target.value){
           case "help":
-            div.innerHTML =   "<b>COMMAND</b>         <b>DESCRIPTION</b>\r\n\r\n" +
+            div.innerHTML =   "<b>COMMAND</b>          <b>DESCRIPTION</b>\r\n\r\n" +
                               "<i>help</i>             list all the commands you could run\r\n" +
                               "<i>clear</i>            clear terminal screen\r\n" +
                               "<i>contact</i>          display my name and contact details\r\n" +
@@ -138,14 +148,14 @@ var prompt = {
             div.innerHTML = " > <b> Motorcycling </b> \r\n" +
                             " > <b> Cooking </b>\r\n" +
                             " > <b> Travelling </b>\r\n" + 
-                            " > <b> Taking free online classes </b>\r\n" +
-                            " > <b> Electronics repair </b>";
+                            " > <b> Backpacking </b>\r\n" +
+                            " > <b> Electronics </b>";
             break;
           case "light on":
-            div.innerHTML = " > <b> The lights went on! Type 'lights off' to turn them off.  </b> \r\n";
+            div.innerHTML = " > <b> The lights went on! Type 'light off' to turn them off.  </b> \r\n";
             break;
           case "light off":
-            div.innerHTML = " > <b> The lights went out! Type 'lights on' to turn them on. </b> \r\n";
+            div.innerHTML = " > <b> The lights went out! Type 'light on' to turn them on. </b> \r\n";
             break;  
           default:
             div.textContent = e.target.value + ": command not found";
