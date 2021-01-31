@@ -83,7 +83,7 @@ var prompt = {
               i = ++i;
               prompt.rememo(i);
             } else if (e.keyCode == 40){
-              i = --  i;
+              i = --i;
               prompt.rememo(i);
             }
 
@@ -127,7 +127,7 @@ var prompt = {
                             " > GitHub: <b> <a href='https://github.com/GonCuesMa/' target='_blank'>/GonCuesMa</a> </b>";
             break;
           case "summary":
-            div.innerHTML = "\r\n > As a recent graduate in Computer Science, I've had the opportunity to carry out work practices where I've could participate in an international project, working as a team and applying values like responsibility, communication, learning, flexibility and organization. My main areas of interest are web development/design and artificial intelligence.\r\n";
+            div.innerHTML = "\r\n > As a recent graduate in Computer Science, I've had the opportunity to carry out work practices where I was able to participate in an international project, working as a team and applying values like responsibility, communication, learning, flexibility and organization. My main areas of interest are web development/design and Artificial Intelligence.\r\n";
             break;
           case "education":
             div.innerHTML = " > <b><a href='https://www.ubu.es/' target='_blank'>University of Burgos</a></b>\r\n" +
@@ -147,7 +147,7 @@ var prompt = {
           case "hobbies":
             div.innerHTML = " > <b> Motorcycling </b> \r\n" +
                             " > <b> Cooking </b>\r\n" +
-                            " > <b> Travelling </b>\r\n" + 
+                            " > <b> Traveling </b>\r\n" + 
                             " > <b> Backpacking </b>\r\n" +
                             " > <b> Electronics </b>";
             break;
@@ -184,6 +184,7 @@ var prompt = {
         prompt.count = 0;
         $(".terminal_main").show();
       }
+      prompt.focus();
     }
 };
 

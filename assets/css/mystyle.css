@@ -42,12 +42,7 @@
 	}
 
 	body {
-		background: -moz-linear-gradient(45deg, #57003f 0%,#f57453 100%) !important; /* FF 3.6+ */  
-		background: -ms-linear-gradient(45deg, #57003f 0%,#f57453 100%) !important; /* IE10 */  
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #57003f), color-stop(100%, #f57453)) !important; /* Safari 4+, Chrome 2+ */  
-		background: -webkit-linear-gradient(45deg, #57003f 0%,#f57453 100%) !important; /* Safari 5.1+, Chrome 10+ */  
-		background: -o-linear-gradient(45deg, #57003f 0%,#f57453 100%) !important; /* Opera 11.10 */  
-		background: linear-gradient(45deg, #57003f 0%,#f57453 100%) !important; /* the standard */  
+		background: rgba(56, 4, 40, 1) !important;
 	}
 }
 
@@ -56,6 +51,10 @@
 	top: 18vh;
 	left: 9vw;
 	display: none;
+	text-align: center;
+	font-family: 'ubuntu mono';
+	font-weight: bold;
+	color: #FFF;
 }
 
 .warn img{
@@ -189,7 +188,7 @@ body.t__maximized {
 	padding: 0;
 	font-size: 7px;
 	background: linear-gradient(#7D7871 0%, #595953 100%);
-	text-shadow: 0px 1px 0px rgba(255,255,255,0.2);
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, .2);
 	box-shadow: 0px 0px 1px 0px #41403A,0px 1px 1px 0px #474642;
 	border: none;
 	margin-right: 4px;
