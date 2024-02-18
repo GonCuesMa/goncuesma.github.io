@@ -96,7 +96,7 @@ var prompt = {
         $('.terminal').addClass('highlight');
       } else {
         $('#overlay').fadeOut(1000);
-        $('.terminal').removeClass('highlight');  
+        $('.terminal').removeClass('highlight');
       }
       prompt.changeContent(e);
     },
@@ -135,19 +135,22 @@ var prompt = {
             break;
           case "experience":
             div.innerHTML = " > <b><a href='https://www.cenieh.es/' target='_blank'>CENIEH</a></b>\r\n" +
-                            "   * Collaborator of <a href='https://ariadne-infrastructure.eu/' target='_blank'>ARIADNEplus</a> project | February 2020 - July 2020\r\n";
+                            "   * Collaborator of <a href='https://ariadne-infrastructure.eu/' target='_blank'>ARIADNEplus</a> project | February 2020 - July 2020\r\n" +
+                            " > <b><a href='https://www.babelgroup.com/' target='_blank'>Babel Sistemas</a></b>\r\n" +
+                            "   * Devops Engineer | December 2020 - now\r\n";
             break;
           case "skills":
-            div.innerHTML = " > Programming languages: <b> Java, PHP, JavaScript (jQuery), Python </b>\r\n" +
-                            " > Databases: <b> PostgreSQL, MySQL </b>\r\n" +
-                            " > Frameworks: <b> Zend Framework </b>\r\n" + 
-                            " > Technologies: <b> Docker, Kubernetes,  MVC</b>\r\n" +
-                            " > Other: <b> Cloud Services (Google Cloud) </b>";
+            div.innerHTML = " > Programming languages: <b> (*) Java, (*) PHP, (***) JavaScript (jQuery), (***) Python, (***) Groovy </b>\r\n" +
+                            " > Databases: <b> (**) PostgreSQL, (***) MySQL, (***) MongoDB </b>\r\n" +
+                            " > Frameworks: <b> (**) Zend Framework, Angular 11 </b>\r\n" +
+                            " > Technologies: <b> (**) Docker, (**) Kubernetes, (**) Helm, (***) Terraform, (**) Ansible </b>\r\n" +
+                            " > Tools: <b> (***) Jenkins, (***) Apache Airflow </b>\r\n" +
+                            " > Cloud Services: <b> (*) Google Cloud, (***) AWS </b>\r\n";
             break;
           case "hobbies":
             div.innerHTML = " > <b> Motorcycling </b> \r\n" +
                             " > <b> Cooking </b>\r\n" +
-                            " > <b> Traveling </b>\r\n" + 
+                            " > <b> Traveling </b>\r\n" +
                             " > <b> Backpacking </b>\r\n" +
                             " > <b> Electronics </b>";
             break;
